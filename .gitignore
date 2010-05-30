@@ -1,3 +1,4 @@
 *.swp
 .netrwhist
 .VimballRecord
+doc/tags
