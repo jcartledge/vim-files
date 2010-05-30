@@ -9,6 +9,8 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set smartindent
+set backspace=indent,eol,start
+set autoread " detect when a file changes outside vim
 
 " gvim options
 set guioptions-=T  "remove toolbar
