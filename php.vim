@@ -1,9 +1,14 @@
 if has("autocmd")
 	" Drupal *.module and *.install files.
-	augroup module
+	" there seems to be a problem with folding in .inc files...
+  augroup module
   autocmd BufRead,BufNewFile *.module set filetype=php
   autocmd BufRead,BufNewFile *.install set filetype=php
   augroup END
+
+  " :make is PHP lint
+  autocmd FileType php set makeprg=php\ -l\ %
+  autocmd FileType php set errorformat=%m\ in\ %f\ on\ line\ %l
 endif
 
 " the following are taken from 

@@ -20,4 +20,11 @@ endif
 set background=dark 
 colors peaksea 
 
+" map F10 to NerdTree
+map <F10> :NERDTreeToggle<CR>
+
+" ctags: look for tags file in current directory, or recurse up
+set tags=tags;/ 
+
+" PHP stuff
 source ~/.vim/php.vim
