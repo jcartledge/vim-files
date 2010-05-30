@@ -10,8 +10,3 @@ General issues:
 
  - define an alias like the above for CLI vim (or gvim)
 
- - apostrophes in markdown
-
-possible problem with F2 mapping in linux
-
-
