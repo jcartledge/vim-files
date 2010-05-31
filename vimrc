@@ -51,3 +51,9 @@ let tlist_php_settings =      'php;c:class;d:constant;f:function'
 " @TODO: check if macmap.vim is available as well
 source $VIMRUNTIME/mswin.vim
 
+" better colours for omnicomplete
+highlight PMenu      gui=bold guibg=LightSkyBlue4 guifg=honeydew2
+highlight PMenuSel   gui=bold guibg=DarkGreen guifg=honeydew2
+highlight PMenuSbar  gui=bold guibg=LightSkyBlue4
+highlight PMenuThumb gui=bold guibg=DarkGreen
+
