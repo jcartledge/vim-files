@@ -57,3 +57,6 @@ highlight PMenuSel   gui=bold guibg=DarkGreen guifg=honeydew2
 highlight PMenuSbar  gui=bold guibg=LightSkyBlue4
 highlight PMenuThumb gui=bold guibg=DarkGreen
 
+" xml tag autoclose
+au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
+
