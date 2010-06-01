@@ -12,6 +12,8 @@ set smartindent
 set autoread " detect when a file changes outside vim
 set incsearch
 set hlsearch
+set wildmode=list:longest
+set scrolloff=1
 
 " change directory to current file
 " @FIXME: doesn't work when a file is loaded from command line
@@ -60,3 +62,4 @@ highlight PMenuThumb gui=bold guibg=DarkGreen
 " xml tag autoclose
 au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
 
+imap <C-space> <c-x><c-o>
