@@ -3,6 +3,7 @@
 syntax on
 filetype plugin indent on
 set nocompatible
+set hidden
 set number
 set expandtab
 set tabstop=2
