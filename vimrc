@@ -31,18 +31,6 @@ set guioptions-=T  "remove toolbar
 set background=dark 
 colors peaksea 
 
-" map shortcuts for NerdTree and Taglist
-map <F2> :NERDTreeToggle<CR>
-map <F3> :TlistToggle<CR>
-
-" taglist settings from http://www.vi-improved.org/vimrc.php
-let Tlist_Auto_Open =          0
-let Tlist_Compact_Format =     1
-let Tlist_Enable_Fold_Column = 0 
-let Tlist_Sort_Type =          "name"  
-let Tlist_Use_Right_Window =   1  
-let Tlist_WinWidth =           40 
-
 " ctags: look for tags file in current directory, or recurse up
 set tags=tags;/ 
 
