@@ -51,4 +51,5 @@ highlight PMenuThumb gui=bold guibg=DarkGreen
 " xml tag autoclose
 au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
 
-imap <C-space> <c-x><c-o>
+" format xml on load
+au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
