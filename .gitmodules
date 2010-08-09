@@ -1,6 +1,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = http://github.com/msanders/snipmate.vim.git
+	url = http://github.com/jcartledge/snipmate.vim.git
 [submodule "bundle/cucumber"]
 	path = bundle/cucumber
 	url = http://github.com/tpope/vim-cucumber.git
