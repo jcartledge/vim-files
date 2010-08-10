@@ -28,3 +28,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = git@github.com:jcartledge/snipmate-snippets.git
+[submodule "bundle/fuzzyfinder"]
+	path = bundle/fuzzyfinder
+	url = http://github.com/itspriddle/vim-fuzzyfinder-pathogen.git
