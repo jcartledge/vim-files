@@ -20,3 +20,10 @@ bundle/snipmate:
   squashed: true
   type: git
   url: http://github.com/msanders/vim-files.git
+bundle/sparkup: 
+  branch: master
+  remote: braid/bundle/sparkup
+  revision: 04a81b41f116a19184359a6f8685c192f5c36c70
+  squashed: true
+  type: git
+  url: http://github.com/rstacruz/sparkup.git
