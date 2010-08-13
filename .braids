@@ -13,6 +13,13 @@ bundle/markdown:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-markdown.git
+bundle/ragtag: 
+  branch: master
+  remote: braid/bundle/ragtag
+  revision: 01ddd82695e079d54285a1c57635bd96e02e8c30
+  squashed: true
+  type: git
+  url: http://github.com/tpope/vim-ragtag.git
 bundle/repeat: 
   branch: master
   remote: braid/bundle/repeat
