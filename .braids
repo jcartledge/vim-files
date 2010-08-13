@@ -1,4 +1,11 @@
 --- 
+bundle/cucumber: 
+  branch: master
+  remote: braid/bundle/cucumber
+  revision: c82f45f67bedfeb8fb90e66e17efacac9e2e4124
+  squashed: true
+  type: git
+  url: http://github.com/tpope/vim-cucumber.git
 bundle/snipmate: 
   branch: master
   remote: braid/bundle/snipmate
