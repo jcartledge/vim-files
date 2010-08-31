@@ -41,6 +41,13 @@ bundle/ragtag:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-ragtag.git
+bundle/rails: 
+  branch: master
+  remote: braid/bundle/rails
+  revision: 9fcb0305d5703493cf164721a41d33af511ff1f1
+  squashed: true
+  type: git
+  url: http://github.com/tpope/vim-rails.git
 bundle/repeat: 
   branch: master
   remote: braid/bundle/repeat
