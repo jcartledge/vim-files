@@ -55,6 +55,13 @@ bundle/repeat:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-repeat.git
+bundle/simplenote: 
+  branch: master
+  remote: braid/bundle/simplenote
+  revision: 79ca767ea7abbfbffa911f24f42637e1e9fc5659
+  squashed: true
+  type: git
+  url: http://github.com/mrtazz/simplenote.vim.git
 bundle/snipmate: 
   branch: master
   remote: braid/bundle/snipmate
