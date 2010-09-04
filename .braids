@@ -62,13 +62,6 @@ bundle/simplenote:
   squashed: true
   type: git
   url: http://github.com/mrtazz/simplenote.vim.git
-bundle/snipmate: 
-  branch: master
-  remote: braid/bundle/snipmate
-  revision: 308c329fe532331428f62dd782f697e66e2a2eb5
-  squashed: true
-  type: git
-  url: http://github.com/msanders/vim-files.git
 bundle/sparkup: 
   branch: master
   remote: braid/bundle/sparkup
