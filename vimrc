@@ -4,23 +4,37 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" change the mapleader from \ to ,
+let mapleader=","
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" ; for commands
+nnoremap ; :
+
+" basic editor config
 syntax on
 filetype plugin indent on
 set nocompatible hidden number
 set expandtab tabstop=2 shiftwidth=2
 set autoindent smartindent
-set autoread 
+set autoread
 set incsearch hlsearch
 set wildmode=list:longest
 set scrolloff=1
 set backspace=indent,eol,start whichwrap+=<,>,[,]
+set nobackup noswapfile
 
 " gvim options
 set guioptions-=T  "remove toolbar
 
 " peaksea colours
 set background=dark
-colors peaksea
+if &t_Co >= 256 || has("gui_running")
+  colors peaksea
+endif
 
 " ctags: look for tags file in current directory, or recurse up
 set tags=tags;/
@@ -56,3 +70,23 @@ nmap <M-RIGHT> :bn<cr>
 
 " highlight whitespace
 :set list listchars=tab:»·,trail:·
+
+" ./ to clear current search highlight
+nmap <silent> ,/ :let @/=""<CR>
+
+" fuzzyfinder mappings from 
+" http://stackoverflow.com/questions/1894614/vim-fuzzyfinder-usage-tips-gotchas-how-can-one-make-use-of-this-plugin/1897075#1897075
+function IdeFindTextMate()
+  let g:FuzzyFinderOptions.Base.key_open = '<CR>'
+  let g:FuzzyFinderOptions.Base.key_open_split = '<C-j>'
+  exe "FuzzyFinderTextMate"
+endfunction
+
+function IdeSplitFindTextMate()
+  let g:FuzzyFinderOptions.Base.key_open = '<C-j>'
+  let g:FuzzyFinderOptions.Base.key_open_split = '<CR>'
+  exe "FuzzyFinderTextMate"
+endfunction
+
+map <silent> <leader>f :call IdeFindTextMate()<CR>
+map <silent> <leader>s :call IdeSplitFindTextMate()<CR>
