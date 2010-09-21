@@ -9,10 +9,17 @@ bundle/cucumber:
 bundle/fugitive: 
   branch: master
   remote: braid/bundle/fugitive
-  revision: a8bd148683c060d37e768bd81496437b2715b200
+  revision: 119fd9e1adf858dd8a7327d923be2b09d1bb9298
   squashed: true
   type: git
   url: http://github.com/tpope/vim-fugitive.git
+bundle/fuzzyfinder-pathogen: 
+  branch: master
+  remote: braid/bundle/fuzzyfinder-pathogen
+  revision: 6d10b077950d759918fb7c8f9f1cf5d76335e8fd
+  squashed: true
+  type: git
+  url: http://github.com/itspriddle/vim-fuzzyfinder-pathogen.git
 bundle/haml: 
   branch: master
   remote: braid/bundle/haml
@@ -27,20 +34,20 @@ bundle/markdown:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-markdown.git
-bundle/pathogen: 
-  branch: master
-  remote: braid/bundle/pathogen
-  revision: 6d10b077950d759918fb7c8f9f1cf5d76335e8fd
-  squashed: true
-  type: git
-  url: http://github.com/itspriddle/vim-fuzzyfinder-pathogen.git
 bundle/ragtag: 
   branch: master
   remote: braid/bundle/ragtag
-  revision: 01ddd82695e079d54285a1c57635bd96e02e8c30
+  revision: e163b7bc36ce69e770d8e99551f897f4968e1b73
   squashed: true
   type: git
   url: http://github.com/tpope/vim-ragtag.git
+bundle/rails: 
+  branch: master
+  remote: braid/bundle/rails
+  revision: 61907a99c1d290384d6a07ddb3d9f39d978ad751
+  squashed: true
+  type: git
+  url: http://github.com/tpope/vim-rails.git
 bundle/repeat: 
   branch: master
   remote: braid/bundle/repeat
@@ -48,13 +55,13 @@ bundle/repeat:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-repeat.git
-bundle/snipmate: 
+bundle/simplenote: 
   branch: master
-  remote: braid/bundle/snipmate
-  revision: 308c329fe532331428f62dd782f697e66e2a2eb5
+  remote: braid/bundle/simplenote
+  revision: 79ca767ea7abbfbffa911f24f42637e1e9fc5659
   squashed: true
   type: git
-  url: http://github.com/msanders/vim-files.git
+  url: http://github.com/mrtazz/simplenote.vim.git
 bundle/sparkup: 
   branch: master
   remote: braid/bundle/sparkup
@@ -65,14 +72,7 @@ bundle/sparkup:
 bundle/surround: 
   branch: master
   remote: braid/bundle/surround
-  revision: ad5690f10eb08688b0772045a4795cf7df461c93
+  revision: 27710a2224d6dd0486d1c40d09ef18dd752e7d37
   squashed: true
   type: git
   url: http://github.com/tpope/vim-surround.git
-snippets: 
-  branch: master
-  remote: braid/snippets
-  revision: c37351df1541fcfdd5e4e22050ebc3b3eb320b00
-  squashed: true
-  type: git
-  url: http://github.com/scrooloose/snipmate-snippets.git
