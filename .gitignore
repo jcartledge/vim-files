@@ -1,6 +1,5 @@
 *.swp
-.*.swp
 .netrwhist
 .VimballRecord
-doc/tags
 simplenoterc
+tags
