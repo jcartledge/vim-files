@@ -28,7 +28,9 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 set nobackup noswapfile
 
 " gvim options
-set guioptions-=T  "remove toolbar
+if has("gui_running")
+  set guioptions-=T  "remove toolbar
+endif
 
 " peaksea colours
 set background=dark
@@ -73,6 +75,9 @@ nmap <M-RIGHT> :bn<cr>
 
 " ./ to clear current search highlight
 nmap <silent> ,/ :let @/=""<CR>
+
+" save file with sudo
+cmap w!! %!sudo tee > /dev/null %
 
 " fuzzyfinder mappings from 
 " http://stackoverflow.com/questions/1894614/vim-fuzzyfinder-usage-tips-gotchas-how-can-one-make-use-of-this-plugin/1897075#1897075

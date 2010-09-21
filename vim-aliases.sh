@@ -4,9 +4,9 @@
 # use wmctrl to bring gvim to the front
 function v {
   if [ $# -gt 0 ]; then
-    gvim --remote-silent $*
+    gvim -f --remote-silent $* 2>/tmp.vim-error.log&
   elif [ ! `gvim --serverlist` ]; then
-    gvim
+    gvim -f 2>/tmp/vim-error.log&
   fi
   wmctrl -xa gvim.Gvim
 }
@@ -18,7 +18,7 @@ function vt {
   if [ `gvim --serverlist` ]; then
     gvim --remote-send "<esc>:tag $1<cr>"
   else
-    gvim -t $1
+    gvim -t $1 2>/tmp/vim-error.log&
   fi
   wmctrl -xa gvim.Gvim
 }
@@ -28,7 +28,7 @@ function vt {
 # use wmctrl to bring gvim to the front
 function vf {
   if [ ! `gvim --serverlist` ]; then
-    gvim
+    gvim 2>/tmp/vim-error.log&
   fi
   gvim --remote-send "<esc>:FuzzyFinderTextMate $1<cr>"
   wmctrl -xa gvim.Gvim
