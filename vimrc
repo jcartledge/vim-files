@@ -88,3 +88,4 @@ function IdeFindTextMate()
 endfunction
 
 map <silent> <C-F> :call IdeFindTextMate()<CR>
+imap <silent> <C-F> <Esc>:call IdeFindTextMate()<CR>
