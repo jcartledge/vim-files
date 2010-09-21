@@ -4,7 +4,7 @@
 # use wmctrl to bring gvim to the front
 function v {
   if [ $# -gt 0 ]; then
-    gvim -f --remote-silent $* 2>/tmp.vim-error.log&
+    gvim -f --remote-silent $* 2>/tmp/vim-error.log&
   elif [ ! `gvim --serverlist` ]; then
     gvim -f 2>/tmp/vim-error.log&
   fi
