@@ -37,7 +37,7 @@ bundle/pathogen:
 bundle/ragtag: 
   branch: master
   remote: braid/bundle/ragtag
-  revision: 01ddd82695e079d54285a1c57635bd96e02e8c30
+  revision: e163b7bc36ce69e770d8e99551f897f4968e1b73
   squashed: true
   type: git
   url: http://github.com/tpope/vim-ragtag.git
