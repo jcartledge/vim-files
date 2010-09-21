@@ -67,8 +67,10 @@ au FileType xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclose
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 " alt-left alt-right to move through buffers
-nmap <M-LEFT> :bN<cr>
-nmap <M-RIGHT> :bn<cr>
+nmap <M-LEFT> :bN<CR>
+nmap <M-RIGHT> :bn<CR>
+imap <M-LEFT> <ESC>:bN<CR>
+imap <M-RIGHT> <ESC>:bn<CR>
 
 " highlight whitespace
 :set list listchars=tab:»·,trail:·
