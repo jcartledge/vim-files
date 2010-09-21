@@ -82,11 +82,4 @@ function IdeFindTextMate()
   exe "FuzzyFinderTextMate"
 endfunction
 
-function IdeSplitFindTextMate()
-  let g:FuzzyFinderOptions.Base.key_open = '<C-j>'
-  let g:FuzzyFinderOptions.Base.key_open_split = '<CR>'
-  exe "FuzzyFinderTextMate"
-endfunction
-
-map <silent> <leader>f :call IdeFindTextMate()<CR>
-map <silent> <leader>s :call IdeSplitFindTextMate()<CR>
+map <silent> <C-F> :call IdeFindTextMate()<CR>
