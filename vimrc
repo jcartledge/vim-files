@@ -89,5 +89,9 @@ function IdeFindTextMate()
   exe "FuzzyFinderTextMate"
 endfunction
 
+" ctrl-f is find file
 map <silent> <C-F> :call IdeFindTextMate()<CR>
 imap <silent> <C-F> <Esc>:call IdeFindTextMate()<CR>
+
+" ,t is taglist
+nmap <silent> <leader>t :TlistToggle<CR>
