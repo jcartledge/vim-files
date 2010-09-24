@@ -1,4 +1,11 @@
 --- 
+bundle/ack: 
+  branch: master
+  remote: braid/bundle/ack
+  revision: b6be751b4b4391e7e25ba51e36300a8e04820846
+  squashed: true
+  type: git
+  url: http://github.com/mileszs/ack.vim.git
 bundle/cucumber: 
   branch: master
   remote: braid/bundle/cucumber
