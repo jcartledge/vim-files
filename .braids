@@ -34,6 +34,13 @@ bundle/haml:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-haml.git
+bundle/jellybean/colors: 
+  branch: master
+  remote: braid/bundle/jellybean/colors
+  revision: 4078734507a820715e2fa8d488ce5d656e7d0435
+  squashed: true
+  type: git
+  url: http://github.com/nanotech/jellybeans.vim.git
 bundle/markdown: 
   branch: master
   remote: braid/bundle/markdown
