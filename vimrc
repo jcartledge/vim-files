@@ -32,10 +32,10 @@ if has("gui_running")
   set guioptions-=T  "remove toolbar
 endif
 
-" peaksea colours
+" colours
 set background=dark
 if &t_Co >= 256 || has("gui_running")
-  colors peaksea
+  colorscheme jellybeans
 endif
 
 " ctags: look for tags file in current directory, or recurse up
@@ -43,7 +43,7 @@ set tags=tags;/
 
 " PHP stuff
 source ~/.vim/php.vim
-let tlist_php_settings =      'php;c:class;d:constant;f:function' 
+let tlist_php_settings = 'php;c:class;d:constant;f:function'
 
 " 20th century keymappings
 vnoremap <C-X> "+x
@@ -53,12 +53,6 @@ cmap <C-V> <C-R>+
 exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
 exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 noremap <C-Q> <C-V>
-
-" better colours for omnicomplete
-highlight PMenu      gui=bold guibg=LightSkyBlue4 guifg=honeydew2
-highlight PMenuSel   gui=bold guibg=DarkGreen guifg=honeydew2
-highlight PMenuSbar  gui=bold guibg=LightSkyBlue4
-highlight PMenuThumb gui=bold guibg=DarkGreen
 
 " xml tag autoclose
 au FileType xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclosetag.vim
