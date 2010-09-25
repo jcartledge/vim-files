@@ -55,6 +55,13 @@ bundle/markdown:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-markdown.git
+bundle/nerdtree: 
+  branch: master
+  remote: braid/bundle/nerdtree
+  revision: e1abd4d373402f745611305435677a92d7707212
+  squashed: true
+  type: git
+  url: http://github.com/scrooloose/nerdtree.git
 bundle/ragtag: 
   branch: master
   remote: braid/bundle/ragtag
