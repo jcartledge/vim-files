@@ -43,7 +43,10 @@ set tags=tags;/
 
 " PHP stuff
 source ~/.vim/php.vim
-let tlist_php_settings = 'php;c:class;d:constant;f:function'
+
+" tlist
+let Tlist_Php_Settings = 'php;c:class;d:constant;f:function'
+let Tlist_Enable_Fold_Column = 0
 
 " 20th century keymappings
 vnoremap <C-X> "+x
