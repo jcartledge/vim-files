@@ -13,6 +13,13 @@ bundle/cucumber:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-cucumber.git
+bundle/delimitMate: 
+  branch: master
+  remote: braid/bundle/delimitMate
+  revision: 1d423ab2b9678a278e0e3d0470d46fc8623c3fe2
+  squashed: true
+  type: git
+  url: http://github.com/Raimondi/delimitMate.git
 bundle/fugitive: 
   branch: master
   remote: braid/bundle/fugitive
@@ -48,6 +55,13 @@ bundle/markdown:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-markdown.git
+bundle/nerdtree: 
+  branch: master
+  remote: braid/bundle/nerdtree
+  revision: e1abd4d373402f745611305435677a92d7707212
+  squashed: true
+  type: git
+  url: http://github.com/scrooloose/nerdtree.git
 bundle/ragtag: 
   branch: master
   remote: braid/bundle/ragtag
