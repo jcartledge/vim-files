@@ -20,6 +20,13 @@ bundle/delimitMate:
   squashed: true
   type: git
   url: http://github.com/Raimondi/delimitMate.git
+bundle/drupal/snippets/snippets: 
+  branch: master
+  remote: braid/bundle/drupal/snippets/snippets
+  revision: 0ad16a3dfabae9fd602c46a9d2bd79e8d3d693f2
+  squashed: true
+  type: git
+  url: http://github.com/theunraveler/Drupal-Snippets-for-Vim.git
 bundle/fugitive: 
   branch: master
   remote: braid/bundle/fugitive
