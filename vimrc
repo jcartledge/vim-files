@@ -98,3 +98,7 @@ nmap <silent> <leader>t :NERDTreeToggle<CR>
 
 " ack command
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+" snippets dir
+let $VIMHOME=expand('<sfile>:p:h')
+let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/snippets"
