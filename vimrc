@@ -90,8 +90,11 @@ endfunction
 map <silent> <C-F> :call IdeFindTextMate()<CR>
 imap <silent> <C-F> <Esc>:call IdeFindTextMate()<CR>
 
-" ,t is taglist
-nmap <silent> <leader>t :TlistToggle<CR>
+" ,T is taglist
+nmap <silent> <leader>T :TlistToggle<CR>
+
+" ,t is nerdtree
+nmap <silent> <leader>t :NERDTreeToggle<CR>
 
 " ack command
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
