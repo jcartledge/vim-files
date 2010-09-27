@@ -12,7 +12,7 @@ let $MYVIMRC=expand('<sfile>:p')
 let $VIMHOME=expand('<sfile>:p:h')
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>ev :split $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " ; for commands
@@ -24,12 +24,15 @@ filetype plugin indent on
 set nocompatible hidden number
 set expandtab tabstop=2 shiftwidth=2
 set autoindent smartindent
+" set gdefault " this seems handy, but too abnormal
 set autoread
-set incsearch hlsearch
+set incsearch hlsearch showmatch
+set ignorecase smartcase
 set wildmode=list:longest
 set scrolloff=1
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 set nobackup noswapfile
+set encoding=utf-8
 
 " gvim options
 if has("gui_running")
@@ -67,17 +70,23 @@ au FileType xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclose
 " format xml on load
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
-" alt-left alt-right to move through buffers
-nmap <M-LEFT> :bN<CR>
-nmap <M-RIGHT> :bn<CR>
-imap <M-LEFT> <ESC>:bN<CR>
-imap <M-RIGHT> <ESC>:bn<CR>
+" alt-arrow to navigate buffers
+nmap <M-Left>   :bN<CR>
+nmap <M-Right>  :bn<CR>
+imap <M-Left>   <ESC>:bN<CR>
+imap <M-Right>  <ESC>:bn<CR>
+
+" shift-arrow to navigate windows
+nmap <S-Left>   <C-w>h
+nmap <S-Down>   <C-w>j
+nmap <S-Up>     <C-w>k
+nmap <S-Right>  <C-w>l
 
 " highlight whitespace
 :set list listchars=tab:»·,trail:·
 
-" ./ to clear current search highlight
-nmap <silent> ,/ :let @/=""<CR>
+" clear current search highlight
+nnoremap <leader>/ :noh<cr>
 
 " save file with sudo
 cmap w!! %!sudo tee > /dev/null %
@@ -93,3 +102,18 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " snippets dir
 let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/snippets"
+
+" maybe mappings
+" nnoremap / /\v
+" vnoremap / /\v
+" nnoremap <up> <nop>
+" nnoremap <down> <nop>
+" nnoremap <left> <nop>
+" nnoremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
+" nnoremap j gj
+" nnoremap k gk
+" nnoremap <leader>ft Vatzf
