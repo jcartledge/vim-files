@@ -7,6 +7,10 @@ call pathogen#runtime_append_all_bundles()
 " change the mapleader from \ to ,
 let mapleader=","
 
+" here
+let $MYVIMRC=expand('<sfile>:p')
+let $VIMHOME=expand('<sfile>:p:h')
+
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
@@ -100,5 +104,4 @@ nmap <silent> <leader>t :NERDTreeToggle<CR>
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " snippets dir
-let $VIMHOME=expand('<sfile>:p:h')
 let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/snippets"
