@@ -27,13 +27,6 @@ bundle/fugitive:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-fugitive.git
-bundle/fuzzyfinder-pathogen: 
-  branch: master
-  remote: braid/bundle/fuzzyfinder-pathogen
-  revision: 6d10b077950d759918fb7c8f9f1cf5d76335e8fd
-  squashed: true
-  type: git
-  url: http://github.com/itspriddle/vim-fuzzyfinder-pathogen.git
 bundle/haml: 
   branch: master
   remote: braid/bundle/haml
