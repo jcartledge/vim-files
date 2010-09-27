@@ -6,7 +6,7 @@
 
 # launch files in gvim
 # support regular commands e.g. +num, +/search/
-function v {
+function launch_vim {
   if [ $# -gt 0 ]; then
     gvim -f --remote-silent $* 2>/tmp/vim-error.log&
   elif [ ! `gvim --serverlist` ]; then
@@ -16,7 +16,7 @@ function v {
 }
 
 # open tag definition in gvim
-function vt {
+function launch_vim_tag {
   if [ `gvim --serverlist` ]; then
     gvim --remote-send "<esc>:tag $1<cr>"
   else
@@ -25,12 +25,5 @@ function vt {
   wmctrl -xa gvim.Gvim
 }
 
-# open FuzzyFinderTextMate in gvim
-function vf {
-  if [ ! `gvim --serverlist` ]; then
-    gvim -f 2>/tmp/vim-error.log&
-    sleep 1
-  fi
-  gvim --remote-send "<esc>:FuzzyFinderTextMate $1<cr>"
-  wmctrl -xa gvim.Gvim
-}
+alias \:e=launch_vim
+alias \:t=launch_vim_tag
