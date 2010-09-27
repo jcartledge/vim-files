@@ -78,18 +78,6 @@ nmap <silent> ,/ :let @/=""<CR>
 " save file with sudo
 cmap w!! %!sudo tee > /dev/null %
 
-" fuzzyfinder mappings from 
-" http://stackoverflow.com/questions/1894614/vim-fuzzyfinder-usage-tips-gotchas-how-can-one-make-use-of-this-plugin/1897075#1897075
-function IdeFindTextMate()
-  let g:FuzzyFinderOptions.Base.key_open = '<CR>'
-  let g:FuzzyFinderOptions.Base.key_open_split = '<C-j>'
-  exe "FuzzyFinderTextMate"
-endfunction
-
-" ctrl-f is find file
-map <silent> <C-F> :call IdeFindTextMate()<CR>
-imap <silent> <C-F> <Esc>:call IdeFindTextMate()<CR>
-
 " ,T is taglist
 nmap <silent> <leader>T :TlistToggle<CR>
 
