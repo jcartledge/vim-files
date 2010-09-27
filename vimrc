@@ -85,8 +85,8 @@ cmap w!! %!sudo tee > /dev/null %
 " ,T is taglist
 nmap <silent> <leader>T :TlistToggle<CR>
 
-" ,t is nerdtree
-nmap <silent> <leader>t :NERDTreeToggle<CR>
+" ,f is nerdtree
+nmap <silent> <leader>f :NERDTreeToggle<CR>
 
 " ack command
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
