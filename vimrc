@@ -15,7 +15,9 @@ let $VIMHOME=expand('<sfile>:p:h')
 nmap <silent> <leader>ev :split $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" ; for commands
+" ; for commands - replaces :
+" (This is really convenient, but annoying
+" when it doesn't work in other vims)
 nnoremap ; :
 
 " basic editor config
@@ -24,10 +26,10 @@ filetype plugin indent on
 set nocompatible hidden number
 set expandtab tabstop=2 shiftwidth=2
 set autoindent smartindent
-" set gdefault " this seems handy, but too abnormal
 set autoread
 set incsearch hlsearch showmatch
 set ignorecase smartcase
+" set gdefault " this seems handy, but too abnormal
 set wildmode=list:longest
 set scrolloff=1
 set backspace=indent,eol,start whichwrap+=<,>,[,]
@@ -102,18 +104,3 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " snippets dir
 let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/snippets"
-
-" maybe mappings
-" nnoremap / /\v
-" vnoremap / /\v
-" nnoremap <up> <nop>
-" nnoremap <down> <nop>
-" nnoremap <left> <nop>
-" nnoremap <right> <nop>
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
-" nnoremap j gj
-" nnoremap k gk
-" nnoremap <leader>ft Vatzf
