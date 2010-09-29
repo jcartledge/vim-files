@@ -18,7 +18,8 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " ; for commands - replaces :
 " (This is really convenient, but annoying
 " when it doesn't work in other vims)
-nnoremap ; :
+nmap ; :
+vmap ; :
 
 " basic editor config
 syntax on
@@ -98,6 +99,10 @@ nmap <silent> <leader>T :TlistToggle<CR>
 
 " ,f is nerdtree
 nmap <silent> <leader>f :NERDTreeToggle<CR>
+
+" ,o is gnome-open
+nmap <silent> <leader>o :call system("gnome-open ".expand('<cWORD>'))<CR>
+vmap <silent> <leader>o :call system("gnome-open ". @*)<CR>
 
 " ack command
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
