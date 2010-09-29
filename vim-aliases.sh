@@ -25,5 +25,5 @@ function launch_vim_tag {
   wmctrl -xa gvim.Gvim
 }
 
-alias \:e=launch_vim
-alias \:t=launch_vim_tag
+alias v=launch_vim
+alias t=launch_vim_tag
