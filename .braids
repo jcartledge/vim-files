@@ -100,7 +100,7 @@ bundle/snipmate:
 bundle/snipmate-snippets/snippets: 
   branch: master
   remote: braid/bundle/snipmate-snippets/snippets
-  revision: c37351df1541fcfdd5e4e22050ebc3b3eb320b00
+  revision: add579ef110b73dc0068bfe5f23796685aef22d7
   squashed: true
   type: git
   url: http://github.com/spf13/snipmate-snippets.git
