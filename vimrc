@@ -104,6 +104,9 @@ nmap <silent> <leader>f :NERDTreeToggle<CR>
 nmap <silent> <leader>o :call system("gnome-open ".expand('<cWORD>'))<CR>
 vmap <silent> <leader>o :call system("gnome-open ". @*)<CR>
 
+" ,s toggles spellcheck
+nmap <silent> <leader>s :setlocal invspell<CR>
+
 " ack command
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
