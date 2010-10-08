@@ -4,9 +4,6 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-" change the mapleader from \ to ,
-let mapleader=","
-
 " here
 let $MYVIMRC=expand('<sfile>:p')
 let $VIMHOME=expand('<sfile>:p:h')
@@ -14,12 +11,6 @@ let $VIMHOME=expand('<sfile>:p:h')
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :split $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-" ; for commands - replaces :
-" (This is really convenient, but annoying
-" when it doesn't work in other vims)
-nmap ; :
-vmap ; :
 
 " basic editor config
 syntax on
@@ -30,16 +21,18 @@ set autoindent smartindent
 set autoread
 set incsearch hlsearch showmatch
 set ignorecase smartcase
-" set gdefault " this seems handy, but too abnormal
 set wildmode=list:longest
-set scrolloff=1
+set scrolloff=3
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 set nobackup noswapfile
 set encoding=utf-8
+set mouse=a
+set mousemodel=popup_setpos
 
 " gvim options
 if has("gui_running")
   set guioptions-=T  "remove toolbar
+  set guioptions-=m  "remove menubar
 endif
 
 " colours
