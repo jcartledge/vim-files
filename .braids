@@ -6,6 +6,13 @@ bundle/ack:
   squashed: true
   type: git
   url: http://github.com/mileszs/ack.vim.git
+bundle/autotag: 
+  branch: master
+  remote: braid/bundle/autotag
+  revision: 46b2e14e62eba28abafd0b22c2697ab888c49d56
+  squashed: true
+  type: git
+  url: http://github.com/vim-scripts/AutoTag.git
 bundle/command-t: 
   branch: master
   remote: braid/bundle/command-t
