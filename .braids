@@ -111,13 +111,6 @@ bundle/snipmate:
   squashed: true
   type: git
   url: http://github.com/msanders/snipmate.vim.git
-bundle/snipmate-snippets/snippets: 
-  branch: master
-  remote: braid/bundle/snipmate-snippets/snippets
-  revision: add579ef110b73dc0068bfe5f23796685aef22d7
-  squashed: true
-  type: git
-  url: http://github.com/spf13/snipmate-snippets.git
 bundle/sparkup: 
   branch: master
   remote: braid/bundle/sparkup
