@@ -78,11 +78,18 @@ nmap <S-Down>   <C-w>j
 nmap <S-Up>     <C-w>k
 nmap <S-Right>  <C-w>l
 
-" highlight whitespace
-:set list listchars=tab:»·,trail:·
+" The following two options interfere with one another.
+"
+" To display tabs and trailing space use :set list
+" for word wrapping use :set nolist
+nmap <silent> <leader>w :set list!<cr>
 
-" clear current search highlight
-nnoremap <leader>/ :noh<cr>
+" word wrapping
+set formatoptions=l
+set lbr
+
+" highlight whitespace
+set listchars=tab:»·,trail:·
 
 " save file with sudo
 cmap w!! %!sudo tee > /dev/null %
