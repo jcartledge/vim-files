@@ -1,28 +1,33 @@
-# a set of aliases for launching gvim
+# a set of aliases for launching gui vim
 #
 # open in an existing instance
-# bring gvim to the front
-# launch gvim with a tty
+# bring vim to the front
+# launch vim with a tty
 
-# launch files in gvim
+# first make sure we have a vim
+type -P mvim &>/dev/null && GUI_VIM=mvim
+type -P gvim &>/dev/null && GUI_VIM=gvim
+if [ ! $GUI_VIM ]; then echo "No GUI Vim available, can't install aliases."&>2; exit 1; fi;
+
+# launch files in vim
 # support regular commands e.g. +num, +/search/
 function launch_vim {
   if [ $# -gt 0 ]; then
-    gvim -f --remote-silent $* 2>/tmp/vim-error.log&
-  elif [ ! `gvim --serverlist` ]; then
-    gvim -f 2>/tmp/vim-error.log&
+    $GUI_VIM -f --remote-silent $* 2>/tmp/vim-error.log&
+  elif [ ! `$GUI_VIM --serverlist` ]; then
+    $GUI_VIM -f 2>/tmp/vim-error.log&
   fi
-  wmctrl -xa gvim.Gvim
+  type -P wmctrl &>/dev/null && wmctrl -xa gvim.Gvim
 }
 
-# open tag definition in gvim
+# open tag definition in vim
 function launch_vim_tag {
-  if [ `gvim --serverlist` ]; then
-    gvim --remote-send "<esc>:tag $1<cr>"
+  if [ `$GUI_VIM --serverlist` ]; then
+    $GUI_VIM --remote-send "<esc>:tag $1<cr>"
   else
-    gvim -t $1 2>/tmp/vim-error.log&
+    $GUI_VIM -t $1 2>/tmp/vim-error.log&
   fi
-  wmctrl -xa gvim.Gvim
+  type -P wmctrl &>/dev/null && wmctrl -xa gvim.Gvim
 }
 
 alias v=launch_vim

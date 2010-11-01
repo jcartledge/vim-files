@@ -22,7 +22,7 @@ set autoread
 set incsearch hlsearch showmatch
 set ignorecase smartcase
 set wildmode=list:longest
-set scrolloff=3
+set scrolloff=2
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 set nobackup noswapfile
 set encoding=utf-8
@@ -67,6 +67,7 @@ au FileType xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclose
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 " alt-arrow to navigate buffers
+" (option-arrow on mac)
 nmap <M-Left>   :bN<CR>
 nmap <M-Right>  :bn<CR>
 imap <M-Left>   <ESC>:bN<CR>
@@ -112,3 +113,9 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " snippets dir
 let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/snippets"
+
+" mac-specific stuff
+if has("gui_macvim")
+  set macmeta
+  let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
+endif
