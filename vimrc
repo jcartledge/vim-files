@@ -117,5 +117,13 @@ let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/snippets"
 " mac-specific stuff
 if has("gui_macvim")
   set macmeta
+  " should link this properly in the shell
   let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
 endif
+
+" syntastic setup?
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
