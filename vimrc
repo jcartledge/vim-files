@@ -66,6 +66,9 @@ au FileType xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclose
 " format xml on load
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
+" save when focus lost
+au FocusLost * :wa
+
 " alt-arrow to navigate buffers
 " (option-arrow on mac)
 nmap <M-Left>   :bN<CR>
