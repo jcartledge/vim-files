@@ -67,7 +67,7 @@ au FileType xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclose
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 " save when focus lost
-au FocusLost * :wa
+au FocusLost ?* :up
 
 " alt-arrow to navigate buffers
 " (option-arrow on mac)
@@ -78,9 +78,13 @@ imap <M-Right>  <ESC>:bn<CR>
 
 " shift-arrow to navigate windows
 nmap <S-Left>   <C-w>h
-nmap <S-Down>   <C-w>j
-nmap <S-Up>     <C-w>k
+imap <S-Left>   <Esc>Bi
 nmap <S-Right>  <C-w>l
+imap <S-Right>  <Esc>Ea
+nmap <S-Down>   <C-w>j
+imap <S-Down>   <ESC><C-w>ja
+nmap <S-Up>     <C-w>k
+imap <S-Up>     <ESC><C-w>ka
 
 " The following two options interfere with one another.
 "
@@ -98,17 +102,17 @@ set listchars=tab:»·,trail:·
 " save file with sudo
 cmap w!! %!sudo tee > /dev/null %
 
-" ,T is taglist
+" taglist
 nmap <silent> <leader>T :TlistToggle<CR>
 
-" ,f is nerdtree
+" nerdtree
 nmap <silent> <leader>f :NERDTreeToggle<CR>
 
-" ,o is gnome-open
-nmap <silent> <leader>o :call system("gnome-open ".expand('<cWORD>'))<CR>
-vmap <silent> <leader>o :call system("gnome-open ". @*)<CR>
+" gnome-open
+nmap <silent> <leader>o :call g:Open_Word_Under_Cursor()<CR>
+vmap <silent> <leader>o :call g:Open_Visual_Selection()<CR>
 
-" ,s toggles spellcheck
+" spellcheck
 nmap <silent> <leader>s :setlocal invspell<CR>
 
 " ack command
@@ -124,7 +128,7 @@ if has("gui_macvim")
   let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
 endif
 
-" syntastic setup?
+" syntastic setup
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
