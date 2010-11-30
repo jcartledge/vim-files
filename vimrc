@@ -66,8 +66,14 @@ au FileType xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclose
 " format xml on load
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
-" save when focus lost
+" save and exit insert mode when focus lost
 au FocusLost ?* :up
+au FocusLost * call PopOutOfInsertMode()
+function! PopOutOfInsertMode()
+    if v:insertmode
+        feedkeys("\<C-\>\<C-n>")
+    endif
+endfunction
 
 " alt-arrow to navigate buffers
 " (option-arrow on mac)
