@@ -139,13 +139,6 @@ bundle/vim-git:
   squashed: true
   type: git
   url: https://github.com/tpope/vim-git.git
-bundle/vimshell: 
-  branch: master
-  remote: braid/bundle/vimshell
-  revision: 251522f28ba793a6f7239d529390e23f9c8bb9fa
-  squashed: true
-  type: git
-  url: https://github.com/Shougo/vimshell.git
 bundle/yankring: 
   branch: master
   remote: braid/bundle/yankring
