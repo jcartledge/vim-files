@@ -20,13 +20,6 @@ bundle/command-t:
   squashed: true
   type: git
   url: git://git.wincent.com/command-t.git
-bundle/conque: 
-  branch: master
-  remote: braid/bundle/conque
-  revision: 877bf63865d0a8dd0e62802c768572bd7e387e8d
-  squashed: true
-  type: git
-  url: https://github.com/rson/vim-conque.git
 bundle/cucumber: 
   branch: master
   remote: braid/bundle/cucumber
