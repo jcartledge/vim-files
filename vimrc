@@ -33,6 +33,7 @@ set mousemodel=popup_setpos
 if has("gui_running")
   set guioptions-=T  "remove toolbar
   set guioptions-=m  "remove menubar
+  set guioptions+=c
 endif
 
 " colours
@@ -111,6 +112,15 @@ nmap <silent> <leader>f :NERDTreeToggle<CR>
 " gnome-open
 nmap <silent> <leader>o :call g:Open_Word_Under_Cursor()<CR>
 vmap <silent> <leader>o :call g:Open_Visual_Selection()<CR>
+
+" fullscreen
+imap <silent> <F11> <Esc>:!wmctrl -r :ACTIVE: -b toggle,fullscreen<CR>a
+nmap <silent> <F11> :!wmctrl -r :ACTIVE: -b toggle,fullscreen<CR>
+vmap <silent> <F11> :!wmctrl -r :ACTIVE: -b toggle,fullscreen<CR>
+
+" shell window
+nmap <silent> <leader>b :ConqueTermVSplit bash<CR>
+nmap <silent> <leader>B :ConqueTermSplit bash<CR>
 
 " spellcheck
 nmap <silent> <leader>s :setlocal invspell<CR>
