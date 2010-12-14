@@ -58,7 +58,7 @@ bundle/haml:
 bundle/indexed-search: 
   branch: master
   remote: braid/bundle/indexed-search
-  revision: 9fdd147f959cdb7f4f8668ae0a354a9ebf995039
+  revision: 500a64a50dda26a4553b296c52eb6610bef55ae6
   squashed: true
   type: git
   url: http://github.com/vim-scripts/IndexedSearch.git
