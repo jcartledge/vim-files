@@ -61,13 +61,13 @@ exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 noremap <C-Q> <C-V>
 
 " xml tag autoclose
-au FileType xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclosetag.vim
+au FileType php,xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclosetag.vim
 
 " format xml on load
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 " save when focus lost
-au FocusLost ?* :up
+au FocusLost ?* :w
 
 " alt-arrow to navigate buffers
 " (option-arrow on mac)
