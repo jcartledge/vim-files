@@ -100,7 +100,7 @@ bundle/ragtag:
 bundle/rails: 
   branch: master
   remote: braid/bundle/rails
-  revision: 61907a99c1d290384d6a07ddb3d9f39d978ad751
+  revision: 26dade8251a07da3d78467bcbc08bd1b2767008d
   squashed: true
   type: git
   url: http://github.com/tpope/vim-rails.git
