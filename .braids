@@ -9,7 +9,7 @@ bundle/ack:
 bundle/autotag: 
   branch: master
   remote: braid/bundle/autotag
-  revision: 46b2e14e62eba28abafd0b22c2697ab888c49d56
+  revision: 64f79063b34103573d2dd4f02a5eac0df4a92d86
   squashed: true
   type: git
   url: http://github.com/vim-scripts/AutoTag.git
