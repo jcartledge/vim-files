@@ -55,13 +55,6 @@ bundle/indexed-search:
   squashed: true
   type: git
   url: http://github.com/vim-scripts/IndexedSearch.git
-bundle/jellybean/colors: 
-  branch: master
-  remote: braid/bundle/jellybean/colors
-  revision: a65a273c9712bfc047b0cc298677cd78d4c7fc35
-  squashed: true
-  type: git
-  url: http://github.com/nanotech/jellybeans.vim.git
 bundle/markdown: 
   branch: master
   remote: braid/bundle/markdown
