@@ -8,7 +8,7 @@ call pathogen#runtime_append_all_bundles()
 let $MYVIMRC=expand('<sfile>:p')
 let $VIMHOME=expand('<sfile>:p:h')
 
-" Quickly edit/reload the vimrc file
+" quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :split $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
@@ -31,9 +31,9 @@ set mousemodel=popup_setpos
 
 " gvim options
 if has("gui_running")
-  set guioptions-=T  "remove toolbar
-  set guioptions-=m  "remove menubar
-  set guioptions+=c
+  set guioptions-=T  " remove toolbar
+  set guioptions-=m  " remove menubar
+  set guioptions+=c  " console dialogs not popups
 endif
 
 " colours
@@ -52,15 +52,6 @@ source ~/.vim/php.vim
 " tlist
 let Tlist_Php_Settings = 'php;c:class;d:constant;f:function'
 let Tlist_Enable_Fold_Column = 0
-
-" 20th century keymappings
-vnoremap <C-X> "+x
-vnoremap <C-C> "+y
-map <C-V> "+gP
-cmap <C-V> <C-R>+
-exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
-noremap <C-Q> <C-V>
 
 " xml tag autoclose
 au FileType php,xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclosetag.vim
@@ -115,6 +106,7 @@ nmap <silent> <leader>o :call g:Open_Word_Under_Cursor()<CR>
 vmap <silent> <leader>o :call g:Open_Visual_Selection()<CR>
 
 " fullscreen
+" only works where wmctrl is present (i.e. not mac)
 imap <silent> <F11> <Esc>:!wmctrl -r :ACTIVE: -b toggle,fullscreen<CR>a
 nmap <silent> <F11> :!wmctrl -r :ACTIVE: -b toggle,fullscreen<CR>
 vmap <silent> <F11> :!wmctrl -r :ACTIVE: -b toggle,fullscreen<CR>
@@ -124,9 +116,6 @@ nmap <silent> <leader>s :setlocal invspell<CR>
 
 " ack command
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
-" snippets dir
-let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/snippets"
 
 " mac-specific stuff
 if has("gui_macvim")
