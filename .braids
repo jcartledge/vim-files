@@ -16,7 +16,7 @@ bundle/autotag:
 bundle/command-t: 
   branch: master
   remote: braid/bundle/command-t
-  revision: a338c4c3a964ec79215aed92b4337763757b17bd
+  revision: dfc4e191604328361bfeda52cd8aae3f9238fdac
   squashed: true
   type: git
   url: git://git.wincent.com/command-t.git
@@ -37,7 +37,7 @@ bundle/delimitMate:
 bundle/fugitive: 
   branch: master
   remote: braid/bundle/fugitive
-  revision: affce710e296f384585e7dbe3b2be4d9d04be49f
+  revision: 64ead8ea1c0b511c426dc132159416b105d4d720
   squashed: true
   type: git
   url: http://github.com/tpope/vim-fugitive.git
@@ -93,7 +93,7 @@ bundle/ragtag:
 bundle/rails: 
   branch: master
   remote: braid/bundle/rails
-  revision: 26dade8251a07da3d78467bcbc08bd1b2767008d
+  revision: d854119b5cb2692341f253be08309698eee3d4a0
   squashed: true
   type: git
   url: http://github.com/tpope/vim-rails.git
@@ -121,14 +121,14 @@ bundle/supertab:
 bundle/surround: 
   branch: master
   remote: braid/bundle/surround
-  revision: 27710a2224d6dd0486d1c40d09ef18dd752e7d37
+  revision: b99ce735ea5b225db11aff33ed608edb8d27e7e3
   squashed: true
   type: git
   url: http://github.com/tpope/vim-surround.git
 bundle/syntastic: 
   branch: master
   remote: braid/bundle/syntastic
-  revision: b8fbc338ce979aec7fbad3acb4cf02da95ec2d00
+  revision: 7e183dd2e2985c2c88cb62df7cc839fd6c265dda
   squashed: true
   type: git
   url: http://github.com/scrooloose/syntastic.git
