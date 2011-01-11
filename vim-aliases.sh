@@ -29,7 +29,7 @@ function launch_vim {
     fi
   elif [ -n "$stdin" ]; then
     # existing instance, no additional args, input on STDIN
-    $GUI_VIM --remote-send "<esc>:ene<cr>i$stdin<esc>gg"
+    $GUI_VIM --remote-send "<esc>:ene<cr>:set paste<cr>i$stdin<esc>:set nopaste<cr>gg"
   fi
   # TODO: gvim specific, mac-ify also
   # bring to front
