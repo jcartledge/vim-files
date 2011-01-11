@@ -16,7 +16,7 @@ function launch_vim {
   args_supplied=0; if [ $# -ne 0 ]; then args_supplied=1; fi
 
   if [ $existing_vim -ne 1 ]; then
-    if [ $args_supplied -eq 1 ]; then start_vim_with_args $*; else; start_vim; fi
+    if [ $args_supplied -eq 1 ]; then start_vim_with_args $* else; start_vim; fi
     bring_vim_to_front
     if [ $pipe_supplied -eq 1 ]; then pipe_stdin_to_vim; fi
   else
