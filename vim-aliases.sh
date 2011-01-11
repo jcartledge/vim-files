@@ -14,22 +14,32 @@ if [ ! $GUI_VIM ]; then echo "No GUI Vim available, can't install aliases."&>2; 
 # support regular commands e.g. +num, +/search/
 function launch_vim {
   
-  if ! [ -t 0 ]; then stdin=`cat`; fi
+  # if ! [ -t 0 ]; then stdin=`cat`; fi
   if [ $# -gt 0 ]; then
-    if [ -n "$stdin" ]; then
+    if ! [ -t 0 ]; then
+    echo "1"
       echo "$stdin" | $GUI_VIM -f --remote-silent $* - 2>/tmp/vim-error.log&
     else
+    echo "2"
       $GUI_VIM -f --remote-silent $* 2>/tmp/vim-error.log&
     fi
   elif [ ! `$GUI_VIM --serverlist` ]; then
     if [ -n "$stdin" ]; then
+    echo "3"
       echo "$stdin" | $GUI_VIM -f - 2>/tmp/vim-error.log&
     else
+    echo "4"
       $GUI_VIM -f 2>/tmp/vim-error.log&
     fi
-  elif [ -n "$stdin" ]; then
+  elif ! [ -t 0 ]; then
     # existing instance, no additional args, input on STDIN
-    $GUI_VIM --remote-send "<esc>:ene<cr>:set paste<cr>i$stdin<esc>:set nopaste<cr>gg"
+    echo "5"
+    type -P wmctrl &>/dev/null && wmctrl -xa gvim.Gvim
+    $GUI_VIM --remote-send "<esc>:ene<cr>"
+    while read stdin
+    do
+      $GUI_VIM --remote-send "<esc>Gi$stdin<cr><esc>"
+    done
   fi
   # TODO: gvim specific, mac-ify also
   # bring to front
@@ -48,10 +58,4 @@ function launch_vim_tag {
 
 alias v=launch_vim
 alias t=launch_vim_tag
-
-
-# $ ls | gvim vim-aliases.sh -
-# > VIM - Vi IMproved 7.2 (2008 Aug 9, compiled Sep 28 2010 07:11:04)
-# > Too many edit arguments: "-"
-# > More info with: "vim -h"
 
