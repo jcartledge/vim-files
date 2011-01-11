@@ -16,18 +16,23 @@ function launch_vim {
   
   if ! [ -t 0 ]; then stdin=`cat`; fi
   if [ $# -gt 0 ]; then
-    # TODO: handle STDIN here - not sure what that means
-    $GUI_VIM -f --remote-silent $* 2>/tmp/vim-error.log&
+    if [ -n "$stdin" ]; then
+      echo "$stdin" | $GUI_VIM -f --remote-silent $* - 2>/tmp/vim-error.log&
+    else
+      $GUI_VIM -f --remote-silent $* 2>/tmp/vim-error.log&
+    fi
   elif [ ! `$GUI_VIM --serverlist` ]; then
     if [ -n "$stdin" ]; then
-      # STDIN, no existing vim
       echo "$stdin" | $GUI_VIM -f - 2>/tmp/vim-error.log&
     else
-      # no STDIN, no existing vim
       $GUI_VIM -f 2>/tmp/vim-error.log&
     fi
+  elif [ -n "$stdin" ]; then
+    # existing instance, no additional args, input on STDIN
+    $GUI_VIM --remote-send "<esc>:ene<cr>i$stdin<esc>gg"
   fi
-  # TODO: handle STDIN here too.
+  # TODO: gvim specific, mac-ify also
+  # bring to front
   type -P wmctrl &>/dev/null && wmctrl -xa gvim.Gvim
 }
 
