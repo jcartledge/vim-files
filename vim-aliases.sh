@@ -3,20 +3,23 @@
 # open in an existing instance
 # bring vim to the front
 # handle STDIN from pipe
-# launch vim with a tty
+# launch vim with an askpass program
 
 # first make sure we have a vim
 type -P mvim &>/dev/null && GUI_VIM=mvim
 type -P gvim &>/dev/null && GUI_VIM=gvim
 if [ ! $GUI_VIM ]; then echo "No GUI Vim available, can't install aliases."&>2; exit 1; fi
 
+SCRIPTNAME=`which $0`
+SCRIPTDIR=`dirname $SCRIPTNAME`
+
 function launch_vim {
-  existing_vim=0; if [ -n `$GUI_VIM --serverlist` ]; then existing_vim=1; fi
+  existing_vim=0; if [ ! -n `$GUI_VIM --serverlist` ]; then existing_vim=1; fi
   pipe_supplied=0; if [ ! -t 0 ]; then pipe_supplied=1; fi
   args_supplied=0; if [ $# -ne 0 ]; then args_supplied=1; fi
 
   if [ $existing_vim -ne 1 ]; then
-    if [ $args_supplied -eq 1 ]; then start_vim_with_args $* else; start_vim; fi
+    if [ $args_supplied -eq 1 ]; then call_vim_with_args $*; else start_vim; fi
     bring_vim_to_front
     if [ $pipe_supplied -eq 1 ]; then pipe_stdin_to_vim; fi
   else
@@ -28,12 +31,12 @@ function launch_vim {
 
 function start_vim {
   echo "Starting $GUI_VIM"
-  $GUI_VIM -f 2>/tmp/vim-error.log&
+  SUDO_ASKPASS=$SCRIPTDIR/askpass.sh $GUI_VIM
 }
 
 function call_vim_with_args {
   echo "Calling $GUI_VIM with args: $*"
-  $GUI_VIM -f --remote-silent $* 2>/tmp/vim-error.log&
+  SUDO_ASKPASS=$SCRIPTDIR/askpass.sh $GUI_VIM --remote-silent $*
 }
 
 function bring_vim_to_front {
