@@ -153,6 +153,13 @@ bundle/vim-git:
   squashed: true
   type: git
   url: https://github.com/tpope/vim-git.git
+bundle/vim-indent-guides: 
+  branch: master
+  remote: braid/bundle/vim-indent-guides
+  revision: 3cd1b09fb38e7a8d477d99295cb1c04ddf7c8b26
+  squashed: true
+  type: git
+  url: https://github.com/nathanaelkane/vim-indent-guides.git
 bundle/yankring: 
   branch: master
   remote: braid/bundle/yankring
