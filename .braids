@@ -118,13 +118,6 @@ bundle/sparkup:
   squashed: true
   type: git
   url: http://github.com/rstacruz/sparkup.git
-bundle/supertab: 
-  branch: master
-  remote: braid/bundle/supertab
-  revision: edfcc1dea02bf08e377f64b90db8423dbe0a3847
-  squashed: true
-  type: git
-  url: https://github.com/ervandew/supertab.git
 bundle/surround: 
   branch: master
   remote: braid/bundle/surround
