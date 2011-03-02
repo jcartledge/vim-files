@@ -181,3 +181,10 @@ bundle/yankring:
   squashed: true
   type: git
   url: https://github.com/vim-scripts/YankRing.vim.git
+man: 
+  branch: master
+  remote: braid/man
+  revision: 4b79c381c3f35e8a61d68cd9e7be9682fb32cfac
+  squashed: true
+  type: git
+  url: https://github.com/vim-scripts/ManPageView.git
