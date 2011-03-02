@@ -46,9 +46,6 @@ endif
 " ctags: look for tags file in current directory, or recurse up
 set tags=tags;/
 
-" PHP stuff
-source ~/.vim/php.vim
-
 " tlist
 let Tlist_Php_Settings = 'php;c:class;d:constant;f:function'
 let Tlist_Enable_Fold_Column = 0
@@ -130,3 +127,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+
+" drupal stuff
+if has("autocmd")
+  autocmd BufRead,BufNewFile *.module set filetype=php
+  autocmd BufRead,BufNewFile *.install set filetype=php
+endif
