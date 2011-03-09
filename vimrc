@@ -76,6 +76,9 @@ imap <S-Down>   <ESC><C-w>ja
 nmap <S-Up>     <C-w>k
 imap <S-Up>     <ESC><C-w>ka
 
+" yankring UI
+nmap <silent> <leader>y :YRShow<CR>
+
 " The following two options interfere with one another.
 "
 " To display tabs and trailing space use :set list
