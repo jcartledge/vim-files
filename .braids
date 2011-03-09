@@ -104,13 +104,6 @@ bundle/nerdtree:
   squashed: true
   type: git
   url: http://github.com/scrooloose/nerdtree.git
-bundle/notes: 
-  branch: master
-  remote: braid/bundle/notes
-  revision: 9c0a055c1e8defc322081fa7a5c680f789c82271
-  squashed: true
-  type: git
-  url: https://github.com/xolox/vim-notes.git
 bundle/preview: 
   branch: master
   remote: braid/bundle/preview
