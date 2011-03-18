@@ -167,6 +167,13 @@ bundle/sherlock:
   squashed: true
   type: git
   url: https://github.com/vim-scripts/sherlock.vim.git
+bundle/shymenu: 
+  branch: master
+  remote: braid/bundle/shymenu
+  revision: cff3aa7ad30101eecbbff5e9cd7bdb1f81597922
+  squashed: true
+  type: git
+  url: https://github.com/tomtom/shymenu_vim.git
 bundle/sparkup: 
   branch: master
   remote: braid/bundle/sparkup
