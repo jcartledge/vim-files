@@ -48,6 +48,13 @@ bundle/cucumber:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-cucumber.git
+bundle/debugger: 
+  branch: master
+  remote: braid/bundle/debugger
+  revision: 1c60d340f295882a79572efcf0b207bdb965dfda
+  squashed: true
+  type: git
+  url: https://github.com/jabapyth/vim-debug.git
 bundle/delimitMate: 
   branch: master
   remote: braid/bundle/delimitMate
