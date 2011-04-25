@@ -93,7 +93,7 @@ bundle/indexed-search:
 bundle/jellybean: 
   branch: master
   remote: braid/bundle/jellybean
-  revision: 61847cc243b6734bac398df0c2a60822e6ac7a97
+  revision: 0460099c34b4e7a545e137aa353539d55dfa601b
   squashed: true
   type: git
   url: http://github.com/nanotech/jellybeans.vim.git

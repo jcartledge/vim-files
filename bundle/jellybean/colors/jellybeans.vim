@@ -11,8 +11,8 @@
 "
 " File:         jellybeans.vim
 " Maintainer:   NanoTech <http://nanotech.nanotechcorp.net/>
-" Version:      1.4~git
-" Last Change:  February 5th, 2011
+" Version:      1.5~git
+" Last Change:  April 11th, 2011
 " Contributors: Daniel Herbert <http://pocket-ninja.com>,
 "               Henry So, Jr. <henryso@panix.com>,
 "               David Liang <bmdavll at gmail dot com>
@@ -300,8 +300,8 @@ if version >= 700
   call s:X("TabLineSel","000000","f0f0f0","italic,bold","Black","White")
 
   " Auto-completion
-  call s:X("Pmenu","ffffff","000000","","White","Black")
-  call s:X("PmenuSel","101010","eeeeee","reverse","White","")
+  call s:X("Pmenu","ffffff","606060","","White","Black")
+  call s:X("PmenuSel","101010","eeeeee","","Black","White")
 endif
 
 call s:X("Visual","","404040","","","Black")
@@ -347,6 +347,9 @@ call s:X("Search","f0a0c0","302028","underline","Magenta","")
 call s:X("Directory","dad085","","","Yellow","")
 call s:X("ErrorMsg","","902020","","","DarkRed")
 hi! link Error ErrorMsg
+hi! link MoreMsg Special
+call s:X("Question","65C254","","","Green","")
+
 
 " Spell Checking
 
@@ -383,6 +386,8 @@ hi! link phpArrayPair Operator
 hi! link rubySharpBang Comment
 call s:X("rubyClass","447799","","","DarkBlue","")
 call s:X("rubyIdentifier","c6b6fe","","","Cyan","")
+hi! link rubyConstant Type
+hi! link rubyFunction Function
 
 call s:X("rubyInstanceVariable","c6b6fe","","","Cyan","")
 call s:X("rubySymbol","7697d6","","","Blue","")
@@ -404,6 +409,10 @@ call s:X("rubyPredefinedIdentifier","de5577","","","Red","")
 hi! link javaScriptValue Constant
 hi! link javaScriptRegexpString rubyRegexp
 
+" CoffeeScript
+
+hi! link coffeeRegExp javaScriptRegexpString
+
 " C
 
 hi! link cOperator Constant
@@ -419,8 +428,10 @@ hi! link objcMethodName Identifier
 hi! link objcMethodArg Normal
 hi! link objcMessageName Identifier
 
-" Tag list
+" Plugins, etc.
+
 hi! link TagListFileName Directory
+call s:X("PreciseJumpTarget","B9ED67","405026","","White","Green")
 
 " Manual overrides for 256-color terminals. Dark colors auto-map badly.
 if !s:low_color
