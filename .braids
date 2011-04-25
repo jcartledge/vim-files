@@ -23,7 +23,7 @@ bundle/autotag:
 bundle/command-t: 
   branch: master
   remote: braid/bundle/command-t
-  revision: 85fd8b0ce657f772ad9c1c50fe502e08ca2bf04c
+  revision: 54b5bedf6923cfce8ee6c109fbf9e9d296bb76fa
   squashed: true
   type: git
   url: git://git.wincent.com/command-t.git
