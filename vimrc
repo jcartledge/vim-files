@@ -1,4 +1,4 @@
- ~/.vimrc should only source this file.
+ " ~/.vimrc should only source this file.
 
 filetype off
 call pathogen#helptags()
