@@ -1,4 +1,4 @@
-" ~/.vimrc should only source this file.
+ " ~/.vimrc should only source this file.
 
 filetype off
 call pathogen#helptags()
@@ -39,8 +39,7 @@ endif
 " colours
 set background=dark
 if &t_Co >= 256 || has("gui_running")
-  " colorscheme peaksea is very good too 
-  colorscheme jellybeans
+  colorscheme solarized
 endif
 
 " ctags: look for tags file in current directory, or recurse up

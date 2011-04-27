@@ -30,7 +30,7 @@ bundle/autotag:
 bundle/command-t: 
   branch: master
   remote: braid/bundle/command-t
-  revision: 85fd8b0ce657f772ad9c1c50fe502e08ca2bf04c
+  revision: 54b5bedf6923cfce8ee6c109fbf9e9d296bb76fa
   squashed: true
   type: git
   url: git://git.wincent.com/command-t.git
@@ -62,6 +62,13 @@ bundle/delimitMate:
   squashed: true
   type: git
   url: http://github.com/Raimondi/delimitMate.git
+bundle/extradite: 
+  branch: master
+  remote: braid/bundle/extradite
+  revision: c1922773b142c1477158877a6dadbd9b18fe352b
+  squashed: true
+  type: git
+  url: https://github.com/vim-scripts/extradite.vim.git
 bundle/file-line: 
   branch: master
   remote: braid/bundle/file-line
@@ -72,7 +79,7 @@ bundle/file-line:
 bundle/fugitive: 
   branch: master
   remote: braid/bundle/fugitive
-  revision: 762bfa79795146ee44d50d4ce8b3e36efcb603b8
+  revision: 3366704c8f3f5df476bd34afb723f59ed4fb1dbf
   squashed: true
   type: git
   url: http://github.com/tpope/vim-fugitive.git
@@ -93,7 +100,7 @@ bundle/indexed-search:
 bundle/jellybean: 
   branch: master
   remote: braid/bundle/jellybean
-  revision: 61847cc243b6734bac398df0c2a60822e6ac7a97
+  revision: 0460099c34b4e7a545e137aa353539d55dfa601b
   squashed: true
   type: git
   url: http://github.com/nanotech/jellybeans.vim.git
@@ -107,21 +114,21 @@ bundle/markdown:
 bundle/nerdcommenter: 
   branch: master
   remote: braid/bundle/nerdcommenter
-  revision: c8d8318257bc39c90a1c67bd794c4c9dd80ed5ad
+  revision: 38630ff5eb9378fd8d917b956ba7d4dbf0b896b3
   squashed: true
   type: git
   url: http://github.com/scrooloose/nerdcommenter.git
 bundle/nerdtree: 
   branch: master
   remote: braid/bundle/nerdtree
-  revision: 1dd345c56db1d11e1c1c7838587b03df7cbd5733
+  revision: 2e072fe0e23a92c75f08cae04cb50ed4212b79f6
   squashed: true
   type: git
   url: http://github.com/scrooloose/nerdtree.git
 bundle/preview: 
   branch: master
   remote: braid/bundle/preview
-  revision: 64d187c20ac596c2bf92748c550558f543913bc7
+  revision: c139fbe3a690a9de12ede4cdd23c230974e6fffd
   squashed: true
   type: git
   url: https://github.com/vim-scripts/preview.git
@@ -142,7 +149,7 @@ bundle/ragtag:
 bundle/rails: 
   branch: master
   remote: braid/bundle/rails
-  revision: 5db62b2ac4b1cabcc34e963b6156180ca58e7469
+  revision: 1bd7f2b8dc57f8e9e48d714a4b32218a0c67d53b
   squashed: true
   type: git
   url: http://github.com/tpope/vim-rails.git
@@ -174,6 +181,13 @@ bundle/shymenu:
   squashed: true
   type: git
   url: https://github.com/tomtom/shymenu_vim.git
+bundle/solarized: 
+  branch: master
+  remote: braid/bundle/solarized
+  revision: 4b0568dd06b5d04bb2c79ffd49d0898abe10ca18
+  squashed: true
+  type: git
+  url: https://github.com/altercation/vim-colors-solarized.git
 bundle/sparkup: 
   branch: master
   remote: braid/bundle/sparkup
