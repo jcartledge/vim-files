@@ -184,7 +184,7 @@ bundle/shymenu:
 bundle/solarized: 
   branch: master
   remote: braid/bundle/solarized
-  revision: 4b0568dd06b5d04bb2c79ffd49d0898abe10ca18
+  revision: 295f56b0121a9d3d40ce12e7e99ab35803cbacc6
   squashed: true
   type: git
   url: https://github.com/altercation/vim-colors-solarized.git
