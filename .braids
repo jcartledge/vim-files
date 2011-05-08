@@ -27,13 +27,6 @@ bundle/autotag:
   squashed: true
   type: git
   url: http://github.com/vim-scripts/AutoTag.git
-bundle/command-t: 
-  branch: master
-  remote: braid/bundle/command-t
-  revision: 56b0fd3e9a30d5a982a7f638b01890cf38be51d6
-  squashed: true
-  type: git
-  url: git://git.wincent.com/command-t.git
 bundle/css-color: 
   branch: master
   remote: braid/bundle/css-color
