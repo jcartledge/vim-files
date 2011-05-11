@@ -6,6 +6,13 @@ bundle/PIV:
   squashed: true
   type: git
   url: https://github.com/spf13/PIV.git
+bundle/VimDebugger: 
+  branch: master
+  remote: braid/bundle/VimDebugger
+  revision: 78520f2905bc2b702d2dff7bc148895d9dbcc28d
+  squashed: true
+  type: git
+  url: https://github.com/taxilian/VimDebugger.git
 bundle/ack: 
   branch: master
   remote: braid/bundle/ack
@@ -20,13 +27,6 @@ bundle/autotag:
   squashed: true
   type: git
   url: http://github.com/vim-scripts/AutoTag.git
-bundle/command-t: 
-  branch: master
-  remote: braid/bundle/command-t
-  revision: 54b5bedf6923cfce8ee6c109fbf9e9d296bb76fa
-  squashed: true
-  type: git
-  url: git://git.wincent.com/command-t.git
 bundle/css-color: 
   branch: master
   remote: braid/bundle/css-color
@@ -44,17 +44,10 @@ bundle/css-folding:
 bundle/cucumber: 
   branch: master
   remote: braid/bundle/cucumber
-  revision: 35b4a3ea17bab837540c7d371d3bd71b5d46eaf5
+  revision: 2ef3e5a4876a4cd5ea83a0dcbf17f5c3edbf9de3
   squashed: true
   type: git
   url: http://github.com/tpope/vim-cucumber.git
-bundle/debugger: 
-  branch: master
-  remote: braid/bundle/debugger
-  revision: 709b32b6f2340637599a3d936199453fd03988b2
-  squashed: true
-  type: git
-  url: https://github.com/ornicar/vim-php-debugger.git
 bundle/delimitMate: 
   branch: master
   remote: braid/bundle/delimitMate
@@ -86,7 +79,7 @@ bundle/fugitive:
 bundle/haml: 
   branch: master
   remote: braid/bundle/haml
-  revision: a0345d5c224aa8c473b11514cf5914823016ffd7
+  revision: cc5625339512b321159511e072a109b089430adb
   squashed: true
   type: git
   url: http://github.com/tpope/vim-haml.git
@@ -111,6 +104,13 @@ bundle/markdown:
   squashed: true
   type: git
   url: http://github.com/tpope/vim-markdown.git
+bundle/molly: 
+  branch: master
+  remote: braid/bundle/molly
+  revision: dc183fb0454a6533432053a1ab99278d0dcc9da2
+  squashed: true
+  type: git
+  url: https://github.com/westoque/molly.vim.git
 bundle/nerdcommenter: 
   branch: master
   remote: braid/bundle/nerdcommenter
@@ -149,7 +149,7 @@ bundle/ragtag:
 bundle/rails: 
   branch: master
   remote: braid/bundle/rails
-  revision: 1bd7f2b8dc57f8e9e48d714a4b32218a0c67d53b
+  revision: 878d7f780f6ac7eb1c86ac6a7a0b6d980ba202d8
   squashed: true
   type: git
   url: http://github.com/tpope/vim-rails.git
@@ -184,7 +184,7 @@ bundle/shymenu:
 bundle/solarized: 
   branch: master
   remote: braid/bundle/solarized
-  revision: 4b0568dd06b5d04bb2c79ffd49d0898abe10ca18
+  revision: 295f56b0121a9d3d40ce12e7e99ab35803cbacc6
   squashed: true
   type: git
   url: https://github.com/altercation/vim-colors-solarized.git
@@ -212,7 +212,7 @@ bundle/surround:
 bundle/syntastic: 
   branch: master
   remote: braid/bundle/syntastic
-  revision: 2c2f64fee315486d330cdbe6d2d41139b6249da1
+  revision: 9f563979227b1e7aaadd0e154943083db792b2bc
   squashed: true
   type: git
   url: http://github.com/scrooloose/syntastic.git
