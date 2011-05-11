@@ -9,7 +9,7 @@ bundle/PIV:
 bundle/VimDebugger: 
   branch: master
   remote: braid/bundle/VimDebugger
-  revision: 78520f2905bc2b702d2dff7bc148895d9dbcc28d
+  revision: 17755ea0aca9f3fd173e9f8df5cfb49fd53717f7
   squashed: true
   type: git
   url: https://github.com/taxilian/VimDebugger.git
