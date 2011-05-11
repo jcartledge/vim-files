@@ -111,13 +111,6 @@ bundle/molly:
   squashed: true
   type: git
   url: https://github.com/westoque/molly.vim.git
-bundle/nerdcommenter: 
-  branch: master
-  remote: braid/bundle/nerdcommenter
-  revision: 38630ff5eb9378fd8d917b956ba7d4dbf0b896b3
-  squashed: true
-  type: git
-  url: http://github.com/scrooloose/nerdcommenter.git
 bundle/nerdtree: 
   branch: master
   remote: braid/bundle/nerdtree
