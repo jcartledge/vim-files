@@ -237,6 +237,13 @@ bundle/vim-jade:
   squashed: true
   type: git
   url: https://github.com/digitaltoad/vim-jade.git
+bundle/vim-stylus: 
+  branch: master
+  remote: braid/bundle/vim-stylus
+  revision: d6d18d70e2edf21de3f54e03e4efd8312e06385d
+  squashed: true
+  type: git
+  url: https://github.com/wavded/vim-stylus.git
 bundle/yankring: 
   branch: master
   remote: braid/bundle/yankring
