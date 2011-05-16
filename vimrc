@@ -12,6 +12,9 @@ let $VIMHOME=expand('<sfile>:p:h')
 nmap <silent> <leader>ev :split $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+"simplenote credentials
+so .SimpleNote
+
 " basic editor config
 syntax on
 filetype plugin indent on

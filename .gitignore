@@ -1,5 +1,6 @@
 *.swp
 .netrwhist
 .VimballRecord
+.SimpleNote
 tags
 spell
