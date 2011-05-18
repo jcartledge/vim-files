@@ -1,0 +1,3 @@
+" fill these in and save as .SimpleNote
+let g:SimpleNoteUserName = "EMAIL"
+let g:SimpleNotePassword = "PASSWORD"

@@ -1,12 +1,16 @@
  " ~/.vimrc should only source this file.
 
-filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-
 " here
 let $MYVIMRC=expand('<sfile>:p')
 let $VIMHOME=expand('<sfile>:p:h')
+
+"simplenote credentials
+so $VIMHOME/.SimpleNote
+
+" pathogen plugins
+filetype off
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
 
 " quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :split $MYVIMRC<CR>
