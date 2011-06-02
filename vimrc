@@ -4,9 +4,6 @@
 let $MYVIMRC=expand('<sfile>:p')
 let $VIMHOME=expand('<sfile>:p:h')
 
-"simplenote credentials
-so $VIMHOME/.SimpleNote
-
 " pathogen plugins
 filetype off
 call pathogen#helptags()
