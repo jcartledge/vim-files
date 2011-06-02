@@ -100,7 +100,7 @@ bundle/markdown:
 bundle/molly: 
   branch: master
   remote: braid/bundle/molly
-  revision: dc183fb0454a6533432053a1ab99278d0dcc9da2
+  revision: 267223f8d6f05cbc13a27a660b17a2f1f8d93d2b
   squashed: true
   type: git
   url: https://github.com/westoque/molly.vim.git
