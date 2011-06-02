@@ -2,7 +2,7 @@
 bundle/PIV: 
   branch: master
   remote: braid/bundle/PIV
-  revision: 6e2fbff8c3c7d21fb2d8a6f8b4bbcfbbc1642f48
+  revision: 25deca4e2465b09812a374ba26e81b1f147706f0
   squashed: true
   type: git
   url: https://github.com/spf13/PIV.git
