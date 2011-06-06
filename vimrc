@@ -13,9 +13,6 @@ call pathogen#runtime_append_all_bundles()
 nmap <silent> <leader>ev :split $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-"simplenote credentials
-so .SimpleNote
-
 " basic editor config
 syntax on
 filetype plugin indent on
