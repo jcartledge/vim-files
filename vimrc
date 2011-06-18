@@ -29,6 +29,7 @@ set nobackup noswapfile
 set encoding=utf-8
 set mouse=a
 set mousemodel=popup_setpos
+set display=lastline foldcolumn=1
 
 " gvim options
 if has("gui_running")
@@ -122,6 +123,7 @@ if has("gui_macvim")
   set macmeta
   " should link this properly in the shell
   let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
+  set guifont=Menlo\ Regular:h13
 endif
 
 " syntastic setup
