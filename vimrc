@@ -31,17 +31,15 @@ set mouse=a
 set mousemodel=popup_setpos
 set display=lastline foldcolumn=1
 
+" colours
+colorscheme solarized
+
 " gvim options
 if has("gui_running")
+  set background=light
   set guioptions-=T  " remove toolbar
   set guioptions-=m  " remove menubar
   set guioptions+=c  " console dialogs not popups
-endif
-
-" colours
-set background=light
-if &t_Co >= 256 || has("gui_running")
-  colorscheme solarized
 endif
 
 " ctags: look for tags file in current directory, or recurse up
@@ -58,10 +56,11 @@ au FocusLost ?* :w
 
 " alt-arrow to navigate buffers
 " (option-arrow on mac)
-nmap <M-Left>   :bN<CR>
-nmap <M-Right>  :bn<CR>
-imap <M-Left>   <ESC>:bN<CR>
-imap <M-Right>  <ESC>:bn<CR>
+" @FIXME: doesn't work
+"nmap <M-Left>   :bN<CR>
+"nmap <M-Right>  :bn<CR>
+"imap <M-Left>   <ESC>:bN<CR>
+"imap <M-Right>  <ESC>:bn<CR>
 
 " shift-arrow to navigate windows
 nmap <S-Left>   <C-w>h
@@ -117,7 +116,6 @@ let g:ackprg="ack -H --nocolor --nogroup --column"
 " mac-specific stuff
 if has("gui_macvim")
   set macmeta
-  " should link this properly in the shell
   set guifont=Menlo\ Regular:h13
 endif
 
