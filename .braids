@@ -90,13 +90,6 @@ bundle/indexed-search:
   squashed: true
   type: git
   url: http://github.com/vim-scripts/IndexedSearch.git
-bundle/jellybean: 
-  branch: master
-  remote: braid/bundle/jellybean
-  revision: 9e4b612bc6729f8a6f39d2f37755511236a93ff9
-  squashed: true
-  type: git
-  url: http://github.com/nanotech/jellybeans.vim.git
 bundle/markdown: 
   branch: master
   remote: braid/bundle/markdown
