@@ -39,7 +39,7 @@ if has("gui_running")
 endif
 
 " colours
-set background=dark
+set background=light
 if &t_Co >= 256 || has("gui_running")
   colorscheme solarized
 endif
@@ -116,7 +116,7 @@ vmap <silent> <F11> :!wmctrl -r :ACTIVE: -b toggle,fullscreen<CR>
 nmap <silent> <leader>s :setlocal invspell<CR>
 
 " ack command
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ack -H --nocolor --nogroup --column"
 
 " mac-specific stuff
 if has("gui_macvim")
