@@ -47,10 +47,6 @@ endif
 " ctags: look for tags file in current directory, or recurse up
 set tags=tags;/
 
-" tlist
-let Tlist_Php_Settings = 'php;c:class;d:constant;f:function'
-let Tlist_Enable_Fold_Column = 0
-
 " xml tag autoclose
 au FileType php,xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoclosetag.vim
 
@@ -96,8 +92,8 @@ set listchars=tab:»·,trail:·
 " save file with sudo
 cmap w!! %!sudo tee > /dev/null %
 
-" taglist
-nmap <silent> <leader>T :TlistToggle<CR>
+" tagbar
+nmap <silent> <leader>T :TagbarToggle<CR>
 
 " nerdtree
 nmap <silent> <leader>f :NERDTreeToggle<CR>
@@ -122,7 +118,6 @@ let g:ackprg="ack -H --nocolor --nogroup --column"
 if has("gui_macvim")
   set macmeta
   " should link this properly in the shell
-  let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
   set guifont=Menlo\ Regular:h13
 endif
 
