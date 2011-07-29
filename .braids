@@ -195,6 +195,13 @@ bundle/tagbar:
   squashed: true
   type: git
   url: git://github.com/majutsushi/tagbar
+bundle/varnish: 
+  branch: master
+  remote: braid/bundle/varnish
+  revision: 1016e76e8c6ee6b816eb6105d832d97d4d5ef0df
+  squashed: true
+  type: git
+  url: https://github.com/empanda/vim-varnish.git
 bundle/vim-git: 
   branch: master
   remote: braid/bundle/vim-git
