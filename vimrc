@@ -1,4 +1,4 @@
- " ~/.vimrc should only source this file.
+" ~/.vimrc should only source this file.
 
 " here
 let $MYVIMRC=expand('<sfile>:p')
@@ -29,18 +29,19 @@ set nobackup noswapfile
 set encoding=utf-8
 set mouse=a
 set mousemodel=popup_setpos
-set display=lastline foldcolumn=1
+set display=lastline
 
-" colours
-colorscheme solarized
-
-" gvim options
+" gui options
 if has("gui_running")
   set background=light
   set guioptions-=T  " remove toolbar
   set guioptions-=m  " remove menubar
   set guioptions+=c  " console dialogs not popups
 endif
+
+" colours
+let g:solarized_visibility="low"    "default value is normal
+colorscheme solarized
 
 " ctags: look for tags file in current directory, or recurse up
 set tags=tags;/
@@ -52,7 +53,7 @@ au FileType php,xhtml,xml so ~/.vim/bundle/html_autoclosetag/ftplugin/html_autoc
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 " save when focus lost
-au FocusLost ?* :w
+au FocusLost * silent! w
 
 " alt-arrow to navigate buffers
 " (option-arrow on mac)
@@ -82,11 +83,10 @@ nmap <silent> <leader>y :YRShow<CR>
 nmap <silent> <leader>w :set list!<cr>
 
 " word wrapping
-set formatoptions=l
-set lbr
+set lbr formatoptions=l
 
 " highlight whitespace
-set listchars=tab:»·,trail:·
+set list listchars=tab:»·,trail:·
 
 " save file with sudo
 cmap w!! %!sudo tee > /dev/null %
