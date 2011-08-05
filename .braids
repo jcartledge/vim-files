@@ -121,7 +121,7 @@ bundle/preview:
 bundle/puppet: 
   branch: master
   remote: braid/bundle/puppet
-  revision: 4616a985789e8cee234a8053e49c971289248aa7
+  revision: b0dbf8e43a12ec52efd541b594a0a6c4b41f5f40
   squashed: true
   type: git
   url: https://github.com/rodjek/vim-puppet.git
