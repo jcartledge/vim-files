@@ -128,7 +128,7 @@ bundle/puppet:
 bundle/ragtag: 
   branch: master
   remote: braid/bundle/ragtag
-  revision: 75a3b16bdfaedd36c0a11287d6a18449feb6bc80
+  revision: 476e61be4ce3054a3481ef9a9226f44cfa6fcb82
   squashed: true
   type: git
   url: http://github.com/tpope/vim-ragtag.git
