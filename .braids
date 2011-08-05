@@ -212,7 +212,7 @@ bundle/vim-git:
 bundle/vim-jade: 
   branch: master
   remote: braid/bundle/vim-jade
-  revision: f490ef831a928b053d5b0e37a56972f5cf09957f
+  revision: 31c77ca9597ce2bb399f436271cc0836e59cd4ea
   squashed: true
   type: git
   url: https://github.com/digitaltoad/vim-jade.git
