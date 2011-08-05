@@ -170,7 +170,7 @@ bundle/solarized:
 bundle/supertab-continued: 
   branch: master
   remote: braid/bundle/supertab-continued
-  revision: 7103c99e7fd6b43246a08684366ded60c6323877
+  revision: 1ff1c1dffc9a1879ac6f2980680a3dfd76d811f7
   squashed: true
   type: git
   url: https://github.com/vim-scripts/SuperTab-continued..git
