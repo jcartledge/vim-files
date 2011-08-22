@@ -92,6 +92,7 @@ set list listchars=tab:»·,trail:·
 cmap w!! %!sudo tee > /dev/null %
 
 " tagbar
+let g:tagbar_ctags_bin="/usr/local/bin/ctags" " brew ctags, not the default mac one
 nmap <silent> <leader>T :TagbarToggle<CR>
 
 " nerdtree
