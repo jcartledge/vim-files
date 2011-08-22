@@ -42,8 +42,11 @@ features:
   [NERDTree.vim](https://github.com/scrooloose/nerdtree).  If
   [dbext.vim](http://www.vim.org/scripts/script.php?script_id=356) is
   installed, it will be transparently configured to reflect
-  `database.yml`.  Cream users get some additional mappings, and all GUI
-  users get a menu.  `:help rails-integration`
+  `database.yml`.  Users of
+  [abolish.vim](https://github.com/tpope/vim-abolish) get pluralize and
+  tableize coercions, and users of
+  [bundler.vim](https://github.com/tpope/vim-bundler) get `bundle exec
+  rake`.  `:help rails-integration`
 
 Installation
 ------------
@@ -95,9 +98,9 @@ If your [commit message sucks](http://stopwritingramblingcommitmessages.com/),
 I'm not going to accept your pull request.  I've explained very politely
 dozens of times that
 [my general guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-are absolute rules on on my own repositories, so I may lack the energy
-to explain it to you yet another time.  And please, if I ask you to
-change something, `git commit --amend`.
+are absolute rules on my own repositories, so I may lack the energy to
+explain it to you yet another time.  And please, if I ask you to change
+something, `git commit --amend`.
 
 Beyond that, don't be shy about asking before patching.  What takes you
 hours might take me minutes simply because I have both domain knowledge
